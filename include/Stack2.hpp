@@ -1,7 +1,7 @@
 // Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
-#ifndef INCLUDE_STACKIMPL_HPP_
-#define INCLUDE_STACKIMPL_HPP_
+#ifndef INCLUDE_STACK2_HPP_
+#define INCLUDE_STACK2_HPP_
 
 #include <utility>
 
@@ -76,4 +76,4 @@ class Stack2 {
   std::size_t _size;
 };
 
-#endif  // INCLUDE_STACKIMPL_HPP_
+#endif  // INCLUDE_STACK2_HPP_

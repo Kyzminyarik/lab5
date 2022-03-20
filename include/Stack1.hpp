@@ -1,7 +1,7 @@
 // Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
-#ifndef INCLUDE_STACK_HPP_
-#define INCLUDE_STACK_HPP_
+#ifndef INCLUDE_STACK1_HPP_
+#define INCLUDE_STACK1_HPP_
 
 #include <memory>
 #include <utility>
@@ -46,4 +46,4 @@ class Stack1 {
   std::unique_ptr<Stack2<T>> _impl;
 };
 
-#endif  // INCLUDE_STACK_HPP_
+#endif  // INCLUDE_STACK1_HPP_
