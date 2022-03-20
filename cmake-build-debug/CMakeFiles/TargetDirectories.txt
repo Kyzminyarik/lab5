@@ -1,0 +1,12 @@
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/install/local.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/package.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/test.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/tests.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/demo.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/stack.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/package_source.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/kuzminyarik/lab-05/cmake-build-debug/CMakeFiles/install.dir

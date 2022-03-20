@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Stack.hpp
+memory
+-
+utility
+-
+StackImpl.hpp
+../include/StackImpl.hpp
+
+../include/StackImpl.hpp
+utility
+-
+
+/home/kuzminyarik/lab-05/demo/main.cpp
+Stack.hpp
+-
+
