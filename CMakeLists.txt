@@ -33,8 +33,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   "$<INSTALL_INTERFACE:include>"
 )
 
-target_link_libraries(demo ${PROJECT_NAME})
-
 if(BUILD_TESTS)
   add_executable(tests
     # TODO: enum your files and delete this comment
