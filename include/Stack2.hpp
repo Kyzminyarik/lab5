@@ -1,4 +1,4 @@
-// Copyright 2021 Slava-100 <svat.strel.2001@gmail.com>
+// Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
 #ifndef INCLUDE_STACKIMPL_HPP_
 #define INCLUDE_STACKIMPL_HPP_
@@ -6,17 +6,17 @@
 #include <utility>
 
 template <typename T>
-class StackImpl {
+class Stack2 {
  public:
-  StackImpl() : _tail(nullptr), _size(0) {}
+  Stack2() : _tail(nullptr), _size(0) {}
 
-  StackImpl(const StackImpl &) = delete;
-  StackImpl(StackImpl &&) = delete;
+  Stack2(const Stack2 &) = delete;
+  Stack2(Stack2 &&) = delete;
 
-  StackImpl &operator=(const StackImpl &) = delete;
-  StackImpl &operator=(StackImpl &&) = delete;
+  Stack2 &operator=(const Stack2 &) = delete;
+  Stack2 &operator=(Stack2 &&) = delete;
 
-  ~StackImpl() {
+  ~Stack2() {
     while (_tail != nullptr) {
       auto tmp = _tail;
       _tail = _tail->prev;

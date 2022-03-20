@@ -1,10 +1,10 @@
-// Copyright 2021 Slava-100 <svat.strel.2001@gmail.com>
+// Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
 #include <gtest/gtest.h>
 
 #include <type_traits>
 
-#include "Stack.hpp"
+#include "Stack1.hpp"
 
 // class for stack testing
 class Point {
@@ -35,7 +35,7 @@ class Point {
 
 TEST(StackTest, PushLValue) {
   const int elements_count = 123;
-  Stack<int> s;
+  Stack1<int> s;
 
   for (int i = 0; i != elements_count; ++i) s.push(i);
 
@@ -50,7 +50,7 @@ TEST(StackTest, PushLValue) {
 
 TEST(StackTest, PushRValue) {
   const int elements_count = 123;
-  Stack<Point> s;
+  Stack1<Point> s;
 
   for (int i = 0; i != elements_count; ++i) s.push(Point(i, 2 * i));
   for (int i = elements_count - 1; i != -1; --i) {
@@ -65,7 +65,7 @@ TEST(StackTest, PushRValue) {
 
 TEST(StackTest, Emplace) {
   const int elements_count = 123;
-  Stack<Point> s;
+  Stack1<Point> s;
 
   for (int i = 0; i != elements_count; ++i) s.emplace(i, 2 * i);
   for (int i = elements_count - 1; i != -1; --i) {
@@ -79,7 +79,7 @@ TEST(StackTest, Emplace) {
 }
 
 TEST(StackTest, Size) {
-  Stack<int> s;
+  Stack1<int> s;
   EXPECT_EQ(0, s.size());
   const int elem = 123;
   s.push(elem);
@@ -87,7 +87,7 @@ TEST(StackTest, Size) {
 }
 
 TEST(StackTest, Empty) {
-  Stack<int> s;
+  Stack1<int> s;
   EXPECT_TRUE(s.empty());
   const int elem = 123;
   s.push(elem);
@@ -95,13 +95,13 @@ TEST(StackTest, Empty) {
 }
 
 TEST(StackTest, MoveConstructor) {
-  EXPECT_TRUE(std::is_move_constructible_v<Stack<int>>);
-  Stack<int> s1;
+  EXPECT_TRUE(std::is_move_constructible_v<Stack1<int>>);
+  Stack1<int> s1;
   const int s1_elements_count = 123;
 
   for (int i = 0; i != s1_elements_count; ++i) s1.push(i);
 
-  Stack<int> s2(std::move(s1));
+  Stack1<int> s2(std::move(s1));
   EXPECT_EQ(s1_elements_count, s2.size());
 
   for (int i = s1_elements_count - 1; i != -1; --i) {
@@ -113,11 +113,11 @@ TEST(StackTest, MoveConstructor) {
 }
 
 TEST(StackTest, MoveAssign) {
-  EXPECT_TRUE(std::is_move_assignable_v<Stack<int>>);
-  Stack<int> s1;
+  EXPECT_TRUE(std::is_move_assignable_v<Stack1<int>>);
+  Stack1<int> s1;
   const int s1_elements_count = 12;
 
-  Stack<int> s2;
+  Stack1<int> s2;
   const int s2_elements_count = 21;
 
   for (int i = 0; i != s1_elements_count; ++i) s1.push(i);
@@ -136,6 +136,6 @@ TEST(StackTest, MoveAssign) {
 }
 
 TEST(ErrorHandling, PopFromEmptyStack) {
-  Stack<int> s;
+  Stack1<int> s;
   EXPECT_THROW(s.pop(), std::runtime_error);
 }

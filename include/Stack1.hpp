@@ -1,4 +1,4 @@
-// Copyright 2020 Slava-100 <svat.strel.2001@gmail.com>
+// Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
 #ifndef INCLUDE_STACK_HPP_
 #define INCLUDE_STACK_HPP_
@@ -6,26 +6,26 @@
 #include <memory>
 #include <utility>
 
-#include "StackImpl.hpp"
+#include "Stack2.hpp"
 
 template <typename T>
-class Stack {
+class Stack1 {
  public:
-  Stack() : _impl(new StackImpl<T>()) {}
+  Stack1() : _impl(new Stack2<T>()) {}
 
-  Stack(const Stack &) = delete;
+  Stack1(const Stack1 &) = delete;
 
-  Stack(Stack &&other) noexcept : _impl(std::move(other._impl)) {}
+  Stack1(Stack1 &&other) noexcept : _impl(std::move(other._impl)) {}
 
-  Stack &operator=(const Stack &) = delete;
+  Stack1 &operator=(const Stack1 &) = delete;
 
-  Stack &operator=(Stack &&other) noexcept {
+  Stack1 &operator=(Stack1 &&other) noexcept {
     if (this == &other) return *this;
     _impl = std::move(other._impl);
     return *this;
   }
 
-  ~Stack() = default;
+  ~Stack1() = default;
 
   void push(const T &value) { _impl->push(value); }
 
@@ -43,7 +43,7 @@ class Stack {
   std::size_t size() const { return _impl->size(); }
 
  private:
-  std::unique_ptr<StackImpl<T>> _impl;
+  std::unique_ptr<Stack2<T>> _impl;
 };
 
 #endif  // INCLUDE_STACK_HPP_

@@ -1,6 +1,6 @@
-// Copyright 2021 Slava-100 <svat.strel.2001@gmail.com>
+// Copyright 2022 kyzminyarik <Yaroslav_kuzmin2002@mail.ru>
 
-#include <Stack.hpp>
+#include <Stack1.hpp>
 
 int main() {
   return 0;
